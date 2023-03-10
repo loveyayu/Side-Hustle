@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> Loveth Task</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Register Your Details</h1>
+        <form method="*">
+            <fieldset>
+                <legend>Register</legend>
+                <label for="fullname">Fullname</label>
+                <input type="text" name="fullname" id="fullname">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="phone">Phone Number</label>
+                <input type="phone" name="phone" id="phone">
+                <label for="Male">Male</label>
+                <input type="radio" name="sex" id="male" value="male">
+                <label for="Female">Female</label>
+                <input type="radio" name="sex" id="female" value="female">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                
+            </fieldset>
+        </form>
+    </body>
+</html><div id="my_form">
+    <p></p>
+    <button id="nextStep">Submit</button>
+  </div>
+  
+  <div id="thank_you" style="display: none;">
+    <p>Thanks for filling up the form!</p>
+    <button type="submit">Close</button>
+  </div>
+  
+  <script>
+    var nextStep = document.querySelector('#nextStep');
+  
+    nextStep.addEventListener('click', function (e) {
+      e.preventDefault();
+      // Hide first view
+      document.getElementById('my_form').style.display = 'none';
+  
+      // Show thank you message element
+      document.getElementById('thank_you').style.display = 'block';
+    });
+  </script>
